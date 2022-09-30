@@ -17,6 +17,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      - name: Run an analysis of the PR   
-        run: sonar-scanner
-          -Dsonar.projectKey=testing-project
+          SONAR_PROJECT_KEY: testing-project
