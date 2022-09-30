@@ -1,0 +1,6 @@
+projectKey=huangxin4565_testing-project
+serverUrl=http://localhost:9050
+serverVersion=8.9.9.56886
+dashboardUrl=http://localhost:9050/dashboard?id=huangxin4565_testing-project&pullRequest=1
+ceTaskId=AYOM6NYsT0FmEV2EiPcA
+ceTaskUrl=http://localhost:9050/api/ce/task?id=AYOM6NYsT0FmEV2EiPcA
