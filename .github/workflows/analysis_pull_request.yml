@@ -6,6 +6,7 @@ on:
     types: [opened, edited, reopened, synchronize]
     branches:
       - main
+      - '[0-9]_[0-9]_x'
 
 # We can now build our job
 jobs:
