@@ -18,4 +18,4 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           token: ${{ secrets.SONAR_TOKEN }}
           host: ${{ secrets.SONAR_HOST_URL }}
-          projectKey: testing-project
+          projectKey: huangxin4565-testing-project
