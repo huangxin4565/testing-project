@@ -2,11 +2,10 @@ name: Analyze pull request
 
 # then define on which event, here a push
 on:
+   push:
+    branches: [main]
    pull_request:
-    types: [opened, edited, reopened, synchronize]
-    branches:
-      - main
-      - '[0-9]_[0-9]_x'
+    branches: [main]
 
 # We can now build our job
 jobs:
