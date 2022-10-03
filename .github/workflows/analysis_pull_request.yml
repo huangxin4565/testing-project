@@ -14,17 +14,9 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        # Disabling shallow clone is recommended for improving relevancy of reporting
-        fetch-depth: 0
-    - name: SonarQube Scan
-      uses: sonarsource/sonarqube-scan-action@master
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      with:
-       args: >
-        -Dsonar.projectKey=testing-project
-        -Dsonar.pullrequest.key=${{ github.event.number }}
-        -Dsonar.pullrequest.branch=${{ github.HEAD_REF }}
+      - uses: vtex/action-sonarqube@main
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.SONAR_TOKEN }}
+          host: ${{ secrets.SONAR_HOST_URL }}
+          projectKey: testing-project
