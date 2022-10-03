@@ -2,14 +2,9 @@
 name: Analyze branch
 
 # then define on which event, here a push
-on:
-  push:
-  # and the target with some regex to match our specific  branch names
-    branches:
-      - master
-      - 'JAHIA-[0-9]-[0-9]-[0-9]-X-BRANCH'
-      - '[0-9]_[0-9]_x'
-      - '[0-9]-[0-9]-X-BRANCH'
+on: 
+    pull_request:
+        branches: [main]
 
 # We can now build our job
 jobs:
