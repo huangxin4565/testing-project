@@ -24,6 +24,5 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       with:
-       projectBaseDir: app/src
        args: >
         -Dsonar.projectKey=testing-project
