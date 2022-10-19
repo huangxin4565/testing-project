@@ -1,29 +1,51 @@
-# Start by giving a name to your workflow
-name: Analyze branch
+# # Start by giving a name to your workflow
+# name: Analyze branch
 
-# then define on which event, here a push
-on:
-   push:
-    branches: [main]
-   pull_request:
-    branches: [main]
+# # then define on which event, here a push
+# on:
+#    push:
+#     branches: [main]
+#    pull_request:
+#     branches: [main]
 
-# We can now build our job
-jobs:
-  build:
+# # We can now build our job
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
     
+#     steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         # Disabling shallow clone is recommended for improving relevancy of reporting
+#         fetch-depth: 0
+#     - name: SonarQube Scan
+#       uses: sonarsource/sonarqube-scan-action@v1.0.0
+#       env:
+#         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+#       with:
+#        args: >
+#         -Dsonar.projectKey=testing-project
+
+
+name: Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        # Disabling shallow clone is recommended for improving relevancy of reporting
-        fetch-depth: 0
-    - name: SonarQube Scan
-      uses: sonarsource/sonarqube-scan-action@v1.0.0
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      with:
-       args: >
-        -Dsonar.projectKey=testing-project
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
