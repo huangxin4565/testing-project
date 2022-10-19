@@ -24,6 +24,7 @@
 	},
 	"dependencies": {
 		"@heroiclabs/nakama-js": "^2.0.1",
+		"chai": "^4.3.6",
 		"compression": "^1.7.4",
 		"copy-webpack-plugin": "^6.2.1",
 		"cross-env": "^7.0.2",
@@ -31,12 +32,14 @@
 		"dotenv-defaults": "^5.0.2",
 		"dotenv-webpack": "^8.0.1",
 		"express": "^4.17.1",
+		"faker": "^6.6.6",
 		"jquery": "^3.5.0",
 		"jquery.transit": "0.9.12",
 		"js-cookie": "^3.0.1",
 		"mocha": "^10.1.0",
 		"node-emoji": "^1.10.0",
-		"phaser-ce": "2.16.0"
+		"phaser-ce": "2.16.0",
+		"sinon": "^14.0.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.9.0",
