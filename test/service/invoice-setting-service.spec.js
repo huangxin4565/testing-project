@@ -6,7 +6,6 @@ const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect;
 const assert = chai.assert;
-const faker = require('faker');
 const proxyquireStrict = require('proxyquire').noCallThru();
 
 //import mock objects
@@ -15,7 +14,6 @@ const EventMock = require('./commons/EventMock');
 const ContextMock = require('./commons/ContextMock');
 
 //import db sequelize
-// const { db, sequelize } = require('../../models/index');
 
 let userUtilsModule = {
 	getUserInfo: (_) => {},
