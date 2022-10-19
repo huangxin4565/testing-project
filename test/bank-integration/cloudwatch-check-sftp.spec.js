@@ -9,9 +9,9 @@ const assert = chai.assert;
 const proxyquireStrict = require('proxyquire').noCallThru();
 
 //import mock objects
-const S3Mock = require('./commons/S3Mock');
-const EventMock = require('./commons/EventMock');
-const ContextMock = require('./commons/ContextMock');
+const S3Mock = require('../commons/S3Mock');
+const EventMock = require('../commons/EventMock');
+const ContextMock = require('../commons/ContextMock');
 
 //import db sequelize
 
