@@ -14,15 +14,15 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
           
-      - name: npm install   
-      - uses: actions/setup-node@v1
-        with:
-         node-version: '12'
-         check-latest: true
-      - run: npm install
+#       - name: npm install   
+#       - uses: actions/setup-node@v1
+#         with:
+#          node-version: '12'
+#          check-latest: true
+#       - run: npm install
       
-      - name: Generate NYC report
-        run: npm run test
+#       - name: Generate NYC report
+#         run: npm run test
       
       
       - name: SonarCloud Scan
