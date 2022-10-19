@@ -9,7 +9,7 @@ export class Animations {
 
 	walk(creature, path, opts) {
 		let game = this.game;
-
+		let game = this.game;
 		if (opts.customMovementPoint > 0) {
 			path = path.slice(0, opts.customMovementPoint);
 			// For compatibility
