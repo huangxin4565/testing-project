@@ -1,0 +1,17 @@
+{
+	"parent": null,
+	"pid": 2032,
+	"argv": [
+		"C:\\Program Files\\nodejs\\node.exe",
+		"C:\\Users\\huang.xin\\Documents\\GitHub\\testing-project\\node_modules\\mocha\\bin\\mocha.js",
+		"test/**/*.js"
+	],
+	"execArgv": [],
+	"cwd": "C:\\Users\\huang.xin\\Documents\\GitHub\\testing-project",
+	"time": 1666176386545,
+	"ppid": 2528,
+	"coverageFilename": "C:\\Users\\huang.xin\\Documents\\GitHub\\testing-project\\.nyc_output\\0939d2b8-b1bb-46ec-ad93-721a538f8db4.json",
+	"externalId": "",
+	"uuid": "0939d2b8-b1bb-46ec-ad93-721a538f8db4",
+	"files": []
+}
