@@ -21,10 +21,15 @@ jobs:
       
 #       - name: Generate NYC report
 #         run: npm run test
-      - name: Install dependencies
-        run: yarn
+      
+      - uses: actions/setup-node@v3
+        with:
+         node-version: 16
+      - run: npm install
+      
       - name: Test and coverage
-        run: yarn jest --coverage
+        run: npm run test
+      
       - name: SonarCloud Scan
         if: always()
         uses: SonarSource/sonarcloud-github-action@master
