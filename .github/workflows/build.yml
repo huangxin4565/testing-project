@@ -17,14 +17,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
          node-version: 14
-      - run: npm ci
       - run: npm install
       
       - name: Generate NYC report
         run: npm run test
-      
-      
       - name: SonarCloud Scan
+        if: always()
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
